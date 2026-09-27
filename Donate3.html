@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donate - CarbonTrack</title>
+
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial;
+        }
+        label {
+            font-size:small;
+            font-style:bold
+        }
+
+        .box {
+            width: 350px;
+            height: 500px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+           
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        .donate {
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .donate:hover {
+            background-color: green;
+        }
+
+        #message {
+            color: darkgreen;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Support Our Planet 🌱</h2>
+        <p>Enter your details to make a donation.</p><br><br>
+
+        <form onsubmit="return validateForm()">
+            <label for="name">Enter your name : </label>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+            <label for="email">Enter your email ID : </label>
+            <input type="email" id="email" placeholder="Enter your email"><br><br>
+            <label for="amount">Enter the donation amount : </label>
+            <input type="number" id="amount" placeholder="Donation amount"><br><br>
+
+            <br>
+
+            <input type="submit" value="Donate" class="donate">
+
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            if (name="") {
+                alert("Please enter your full name.");
+                return false;
+            }
+            var email = document.getElementById("email").value;
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+             if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            var amount = document.getElementById("amount").value;
+             if (amount<=0) {
+                alert("Please enter a valid amount");
+                return false;
+            }
+        
+            alert("Thank you for your donation! 🌱");
+             document.querySelector("form").reset();
+            return false;
+        }
+    </script>
+
+</body>
+</html>

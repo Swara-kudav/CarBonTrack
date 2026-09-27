@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Energy Calculator</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .box {
+            background-color: white;
+            border: 2px solid green;
+            padding: 30px;
+            margin: 50px auto;
+            width: 70%;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>⚡ Energy Carbon Calculator</h1>
+
+        <p>Enter your monthly electricity consumption.</p>
+
+        <label>Electricity used per month (kWh):</label><br>
+        <input type="number" id="units"><br>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <h2 id="result"></h2>
+
+        <button id="hero" onclick="location.href='Main page.html'">
+            Back to Home
+        </button>
+    </div>
+
+    <script>
+        function calculate() {
+            var units = Number(document.getElementById("units").value);
+
+            var result = units * 0.7;
+
+            document.getElementById("result").innerHTML =
+                "Your estimated monthly emissions are " +
+                result.toFixed(2) + " kg CO₂.";
+        }
+    </script>
+
+</body>
+</html>

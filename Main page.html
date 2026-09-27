@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head><title>CarbonTrack</title>
+    <style>
+        span{
+            color:rgb(16, 67, 5); 
+            background-color: yellow;
+            padding: 10px;
+        }
+        .heading {
+            color:rgb(47, 47, 18);
+            background-color: greenyellow;
+            text-align: center;
+            padding: 50px;
+        }
+        .navbar {
+        background-color: #263800;
+        padding: 15px;
+        text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: green;
+            border-radius: 5px;
+        }
+
+        .sections {
+            display: flex;
+            gap: 30px;
+            padding: 50px;
+        }
+       
+        .box {
+            background-color: lightyellow;
+            border: 2px solid black;
+            padding: 50px;
+            width: 33%;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .box:hover {
+            background-color: #eaffc4;
+        }
+
+        .box img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        input {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .info-section {
+        width: 90%;
+        margin: 40px auto;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background: lightyellow;
+        border-radius: 15px;
+        }
+
+        .info-image,
+        .info-content {
+            width: 50%;
+        }
+
+        .info-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .info-content h2 {
+            font-size: 28px;
+            color: #263800;
+        }
+
+        .info-content p {
+            font-size: 17px;
+            
+        }
+        .info-content button{
+           padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px; 
+        }
+        .info-content button:hover{
+            background: #263800a4;
+        }
+        .sora {
+        width: 90%;
+        margin: 40px auto;
+        padding: 50px;
+        align-items: center;
+        gap: 40px;
+        background: lightyellow;
+        border-radius: 15px;
+        }
+        .sora h2 {
+            text-align:center;
+            font-size: 35px;
+            color: #263800;
+        }
+
+        .sora p {
+            font-size: 25px;
+            text-align:center;
+            
+        }
+        .sora button{
+           padding: 10px;
+           display:block;
+           margin:auto;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px; 
+        }
+        .sora button:hover{
+            background: #263800a4;
+        }
+        .info {
+            text-align: center;
+            padding: 20px;
+            background-color: #e5f5d0;
+        }
+        .info h2 {
+            color: darkgreen;
+        }
+
+        .Credits {
+            text-align: center;
+            color: #e5f5d0;
+            padding: 25px;
+            background-color: #1a2a05;
+        }
+        .Credits h2, h2 {
+            color: rgb(142, 182, 142);
+        }
+        .sakec {
+             text-align: center;
+            color: #e5f5d0; 
+            padding: 1px;
+            background-color: #1a2a05;
+        }
+        .sakec p{text-align: center;
+            color: #e5f5d0;
+            padding: 25px;
+            background-color: #1a2a05;
+        }
+
+
+    </style></head>
+<!--Head-->
+    <body bgcolor="lightyellow">
+        
+        <div class="heading">
+        <h1 align="center">
+            Calculate your Carbon footprint <span> Change your impact </span>
+        </h1>
+        </div>
+        <div class="navbar">
+            <a href="Main page.html">Home</a>
+            <a href="Transport.html">Transport footprint</a>
+            <a href="Energy.html">Energy footprint</a>
+            <a href="Food input.html">Food footprint</a>
+            <a href="Donate3.html">Donate</a>
+        </div>
+        <hr>
+<!-- Information no. 1-->
+        <section class="info-section">
+        <div class="info-image">
+        <img src="C:\Users\OMKAR KUDAV\Desktop\MICROPROJECT 1\Main.jpg" alt="Renewable energy">
+        </div>
+
+        <div class="info-content">
+        <h2>What is carbon foorprint?</h2>
+        <p>
+            A carbon footprint is the total amount of greenhouse gases (including carbon dioxide and methane) that are generated by our actions.<br><br>
+            The average carbon footprint for a person in the United States is 16 tons, one of the highest rates in the world. Globally, the average carbon footprint is closer to 4 tons. 
+            To have the best chance of avoiding a 2℃ rise in global temperatures, the average global carbon footprint per year needs to drop to under 2 tons by 2050.
+        </p>
+        <button onclick="window.location.href='Transport.html'">
+            Take Action
+        </button>
+
+        
+    </div>
+</section>
+<!--3 boxes-->
+         <div class="sections">
+
+        <div class="box">
+            <img src="C:\Users\OMKAR KUDAV\Desktop\MICROPROJECT 1\Transport.jpeg" alt="Transportation scene showing travel options in an outdoor environment, introducing the transport carbon footprint calculator">
+            <h2>Transport</h2>
+            <p>How do you get around?<br>
+            Your daily travel contributes to emissions. Tell us about your commute and travel habits.</p>
+            <input type="button" value="Calculate Transport →" onclick="window.location.href='Transport.html'">
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\OMKAR KUDAV\Desktop\MICROPROJECT 1\energy.jpg" alt="Intermodal transportation scene showing connected methods of moving people or goods, introducing the energy carbon footprint calculator">
+            <h2>Energy</h2>
+            <p>What's  your energy usage?<br>
+             Electricity and home energy use add to your carbon footprint. Enter your monthly usage details</p> 
+             <input type="button" value="Calculate energy usage →" onclick="window.location.href='Energy.html'">
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\OMKAR KUDAV\Desktop\MICROPROJECT 1\Food.jpg" alt="Food and lifestyle scene showing food choices in an everyday setting, introducing the food impact calculator">
+            <h2>Food and Lifestyle</h2>
+            <p>What do you eat?<br>
+            Food choice,especially meat and packaged food have a big impact.Tell us about your habits.</p>
+            <input type="button" value="Calculate food impact →" onclick="window.location.href='Food input.html'">
+        </div>
+
+    </div>
+<!--Donation-->
+    <hr>
+    <div class="sora">
+        <h2>Protect nature with a donation.</h2>
+        <p>
+           Do your part to create a more sustainable future for our planet. Donate today and you’ll be a member, funding urgent direct conservation and advocacy. 
+           The power to protect and restore nature—now and for the next generation—is in your hands.
+        </p>
+
+        <button onclick="window.location.href='Donate3.html'">
+            DONATE
+        </button>
+    </div>
+<!-- Cute section -->
+    <div class="info">
+        <h2>🌍 Why Does Your Carbon Footprint Matter?</h2>
+
+        <p>
+            Small changes in the way we travel, use energy and choose food
+            can help reduce our impact on the environment.
+        </p>
+
+        <p>
+            🌱 Travel sustainably &nbsp; | &nbsp;
+            💡 Save energy &nbsp; | &nbsp;
+            ♻️ Reduce waste
+        </p>
+    </div>
+<!-- Creds and references -->
+    <div class="Credits">
+        
+        <H2>Credits:  </H2>
+        <p>
+            Swara kudav, 
+            41,
+            IT-1 (Batch B) 
+        </p>
+
+        <p>
+            Janhavi shetty,
+            56,
+            IT-1 (Batch B)
+
+        </p>
+        </div>
+        <div class="sakec">
+        <h2 align="center">References: </h2>
+        <p>
+            Nature.org,
+            ChatGPT,
+            Claude AI.
+        </p>
+    </div>
+    </body>
+    </html>
+

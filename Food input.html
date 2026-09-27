@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food and Lifestyle Calculator</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .box {
+            background-color: white;
+            border: 2px solid green;
+            padding: 30px;
+            margin: 50px auto;
+            width: 70%;
+        }
+
+        input, select {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>🍎 Food and Lifestyle Calculator</h1>
+
+        <p>Estimate your<b>monthly</b> food-related emissions.</p>
+
+        <label>Number of meals per day:</label><br>
+        <input type="number" id="meals"><br>
+
+        <label>Food preference:</label><br>
+        <select id="food">
+            <option value="2.5">Mostly vegetarian</option>
+            <option value="3.5">Mixed diet</option>
+            <option value="5">Mostly meat-based</option>
+        </select><br>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <h2 id="result"></h2>
+
+        <button id="hero" onclick="location.href='Main page.html'">
+            Back to Home
+        </button>
+    </div>
+
+    <script>
+        function calculate() {
+            var meals = Number(document.getElementById("meals").value);
+            var factor = Number(document.getElementById("food").value);
+
+            var result = meals * factor * 30;
+
+            document.getElementById("result").innerHTML =
+                "Your estimated monthly emissions are " +
+                result.toFixed(2) + " kg CO₂.";
+        }
+    </script>
+
+</body>
+</html>

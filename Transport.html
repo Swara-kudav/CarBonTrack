@@ -1,0 +1,81 @@
+<html>
+    <head><title>Calculate your carbon footprint</title>
+        <style>
+            body {
+                background-color: lightyellow;
+                font-family: Arial;
+                text-align: center;
+            }
+    
+            .box {
+                background-color: white;
+                border: 2px solid green;
+                padding: 30px;
+                margin: 50px auto;
+                width: 70%;
+            }
+    
+            input, select {
+                padding: 10px;
+                margin: 8px;
+            }
+    
+            button {
+                padding: 10px 20px;
+                background-color: green;
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+            .hero {
+                background-color:rgb(13, 70, 13)
+            }
+        </style>
+    </head>
+    
+    <body>
+    
+        <div class="box">
+            <h1>🚗 Transport Carbon Calculator</h1>
+    
+            <p>Calculate your estimated monthly transport emissions.</p>
+    
+            <label>Distance travelled per day (km):</label><br>
+            <input type="number" id="distance"><br>
+    
+            <label>Number of days travelled per month:</label><br>
+            <input type="number" id="days" value="30"><br>
+    
+            <label>Vehicle:</label><br>
+            <select id="vehicle">
+                <option value="0.21">Car</option>
+                <option value="0.08">Bus</option>
+                <option value="0.04">Train</option>
+                <option value="0">Walking / Cycling</option>
+            </select><br>
+    
+            <button onclick="calculate()">Calculate</button>
+    
+            <h2 id="result"></h2>
+            
+            <button class="hero" onclick="location.href='Main page.html'">
+                Back to Home
+            </button>
+        </div>
+    
+        <script>
+            function calculate() {
+                var distance = Number(document.getElementById("distance").value);
+                var days = Number(document.getElementById("days").value);
+                var factor = Number(document.getElementById("vehicle").value);
+    
+                var result = distance * days * factor;
+    
+                document.getElementById("result").innerHTML =
+                    "Your estimated monthly emissions are " +
+                    result.toFixed(2) + " kg CO₂.";
+            }
+        </script>
+    
+    </body>
+    </html>
